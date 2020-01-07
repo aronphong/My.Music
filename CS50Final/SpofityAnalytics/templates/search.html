@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+<h1> Search for your favorite Artist</h1>
+
+<form action="/search" method="post">
+<div>
+    <input type="text" autofocus autocomplete="off" name="artist" placeholder="Artist Name" >
+</div>
+
+<div>
+    <button type="submit">Type in Artist name</button>
+</div>
+</form>
+
+{% endblock %}

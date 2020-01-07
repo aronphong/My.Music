@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register Now!
+{% endblock %}
+
+{% block main %}
+
+<div>
+<h2>Register now!</h2>
+</div>
+
+<form action="/register" method="post">
+    
+    <div class="container">
+        <label for="username"><b> User Name </b></label>
+        <input autocomplete="off" autofocus name="username" placeholder="username" type="text">
+
+        <label for="password"><b> Password </b></label>
+        <input class="form-control" name="password" placeholder="enter password" type="password">
+
+        <label for="confirmation"><b> Confirm Password </b></label>
+        <input class="form-control" name="confirmation" placeholder="confirm password" type="password">
+
+        <button class="btn btn-primary" type="submit">Register Now</button>
+    </div>
+</form>
+{% endblock %}

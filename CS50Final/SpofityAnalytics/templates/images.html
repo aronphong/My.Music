@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Artist Search
+{% endblock %}
+
+{% block main %}
+
+<div class="containerfeatures">
+    <form action="/features" method="post">
+        <div class="checkboxes">
+            <input type="checkbox" name="feature" value="danceability">Danceability <br>
+            <input type="checkbox" name="feature" value="energy">Energy <br>
+            <input type="checkbox" name="feature" value="mode">Mode <br>
+            <input type="checkbox" name="feature" value="speechiness">Speechiness <br>
+            <input type="checkbox" name="feature" value="acousticness">Acousticness <br>
+            <input type="checkbox" name="feature" value="instrumentalness">Instrumentalness <br>
+            <input type="checkbox" name="feature" value="valence">Valence <br>
+            <button type="submit">Plot Features</button>
+        </div>
+    </form>
+</div>
+
+{{ user_features }}
+
+<div class="center">
+    <img src="/generate_fig">
+</div>
+
+
+<!-- <div>
+    <img src="/plot_userfeatures">
+</div> -->
+
+
+{% endblock %}
